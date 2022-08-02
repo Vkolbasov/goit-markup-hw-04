@@ -11,6 +11,8 @@
   --box-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --border-header-color: #ececec;
+  --icon-color: #afb1b8;
+  --footer-icon-background: rgb(255 255 254 / 10%);
 }
 
 body {
@@ -106,9 +108,16 @@ img {
 /* Контакты*/
 .contacts-link {
   color: var(--primary-text-color);
+
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-weight: 500;
   line-height: 1.14;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  fill: var(--primary-text-color);
+  gap: 10px;
 }
 .contacts .contacts-link:hover,
 .contacts .contacts-link:focus {
@@ -119,6 +128,15 @@ img {
   margin-left: auto;
   gap: 50px;
 }
+
+/* .mail-icon {
+  width: 16px;
+  height: 12px;
+}
+.phone-icon {
+  width: 10px;
+  height: 16px;
+} */
 
 /*Секции*/
 
@@ -194,8 +212,24 @@ img {
   gap: 30px;
 }
 
+.details-icon {
+  display: flex;
+  gap: 30px;
+}
 .details-item {
+  background-color: var(--secondary-bg-color);
+
+  display: flex;
   width: 270px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.details-item {
+  width: calc((100% - 90px) / 4);
 }
 
 .details-title {
@@ -271,7 +305,37 @@ img {
   letter-spacing: 0.03em;
 }
 
+.our-team-contacts {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  gap: 10px;
+}
+
+.our-team-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-color);
+}
+
+.our-team-link:hover,
+.our-team-link:focus {
+  background-color: var(--button-link-primary);
+  fill: var(--primay-bg-color);
+}
+
+/* КЛИЕНТЫ */
+
 /* Футер */
+
+.footer-con {
+  display: flex;
+  gap: 70px;
+}
 
 .footer {
   padding-top: 60px;
@@ -308,6 +372,37 @@ img {
 .foot-link:hover,
 .foot-link:focus {
   color: var(--button-link-primary);
+}
+
+.foter-title {
+  color: var(--primay-bg-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  padding-top: 12px;
+}
+
+.contacts-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  fill: var(--primay-bg-color);
+  background-color: var(--footer-icon-background);
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+  background-color: var(--button-link-primary);
 }
 
 /* ПОРТФОЛИО */
