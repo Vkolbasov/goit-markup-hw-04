@@ -10,9 +10,14 @@
   --project-card-shadow: #eeeeee;
   --box-shadow-card: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-portfolio: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  --filtres-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --border-header-color: #ececec;
   --icon-color: #afb1b8;
   --footer-icon-background: rgb(255 255 254 / 10%);
+  --gardient-hero: rgba(47, 48, 58, 0.4);
 }
 
 body {
@@ -156,6 +161,18 @@ img {
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  background-image: linear-gradient(
+      to right,
+      var(--gardient-hero),
+      var(--gardient-hero)
+    ),
+    url(../images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -404,6 +421,37 @@ img {
 .footer-icon:focus {
   background-color: var(--button-link-primary);
 }
+/* Постоянные Клиенты */
+
+.clients-nav {
+  display: flex;
+  gap: 30px;
+}
+
+.clients-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  fill: var(--icon-color);
+  width: 170px;
+  height: 92px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--button-link-primary);
+  border-color: var(--button-link-primary);
+}
 
 /* ПОРТФОЛИО */
 
@@ -436,10 +484,7 @@ img {
   background-color: var(--button-link-primary);
   color: var(--primay-bg-color);
 }
-.resume-accent {
-  background-color: #188ce8;
-  color: var(--primay-bg-color);
-}
+
 /*Проекты*/
 .project {
   display: flex;
@@ -474,4 +519,8 @@ img {
 .project-link {
   text-decoration: none;
   display: block;
+}
+.project-link:hover,
+.project-link:focus {
+  box-shadow: var(--box-shadow-portfolio);
 }
